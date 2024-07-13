@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0303;
+  
+}
+
+.brand-title {
+  font-size: 2.7rem;
+  margin: 0rem;
+  color: #d8f6ff;
+  font-family: "DM Sans", sans-serif;
+}
+
+.navbar{
+  height: fit-content;
+}
+
+.navbar-links {
+  height: 100%;
+  
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: #d8f6ff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5em;
+  padding: 0.9rem;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.4rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #d8f6ff;
+  border-radius: 10px;
+}
+
+
+.text-overlay {
+  position: absolute;
+  top: 82%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: #d8f6ff;
+  font-size: 80px;
+  text-align: center;
+  background-color: #333;
+  width: 800px;
+  height: 150px;
+  border: 10px solid #d8f6ff;
+  margin-left: 45px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+main{
+height: fit-content;
+
+}
+
+main p {
+  padding-left: 75px;
+  padding-right: 370px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #d8f6ff;
+  font-size: 30px;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  height: 300px;
+  position: relative;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: left;
+  padding-left: 80px;
+}
+
+.div-footer ul {
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.div-footer li:hover {
+  text-decoration: underline;
+}
+
+.design-details {
+  font-size: 18px;
+  padding-left: 30px;
+  margin-top: 100px;
+}
+
+.div-footer-icons {
+  font-size: 50px;
+  padding-top: 62px;
+  margin-left: 20px;
+}
+
+.div-footer-icons i {
+  padding: 15px;
+}
+
+.div-footer-icons a:hover {
+  color: cadetblue;
+}
+
+
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .text-overlay {
+    font-size: 35px;
+    width: 300px;
+    height: 80px;
+    border: 7px solid #d8f6ff;
+    padding-top: 5px;
+  }
+
+
+  main{
+    height: fit-content;
+    
+    }
+
+  main p {
+    font-size: 15px;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    line-height: 1.5;
+    text-align: center;
+    text-align: justify;
+  }
+
+  .design-details {
+    font-size: 10px;
+  }
+
+  
+  .div-footer-icons {
+    font-size: 20px;
+    padding-right: 12px;
+  }
+
+  .div-footer a {
+    font-size: 15px;
+  }
+
+  .footer-content {
+    padding-left: 30px;
+  }
+
+}

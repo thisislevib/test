@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0303;
+  height: fit-content;
+  
+}
+
+.brand-title {
+  font-size: 2.7rem;
+  color: #d8f6ff;
+  font-family: "DM Sans", sans-serif;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: #d8f6ff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5em;
+  padding: 0.9rem;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.4rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #d8f6ff;
+  border-radius: 10px;
+}
+
+  
+h1 {
+  font-size: 52px;
+  word-break: break-all;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 0.3px;
+}
+
+h1,p{
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+p{
+  padding-bottom: 25px;
+}
+
+body {
+  background-color: #d8f6ff;
+}
+
+main{
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.layout {
+  width: 600px;
+  margin: auto;
+}
+
+.accordion {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.accordion__question p {
+  margin: 5px;
+  padding: 0;
+  font-family: Verdana;
+  font-size: 20px;
+  color: #d8f6ff;
+}
+
+.accordion__answer p {
+  margin: 5px;
+  padding: 20px;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(8, 6, 6);
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: justify;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  
+}
+
+.accordion:hover {
+  cursor: pointer;
+}
+
+.accordion__answer {
+  display: none;
+}
+
+.accordion.active .accordion__answer {
+  display: block;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  height: 300px;
+  position: relative;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: left;
+  padding-left: 80px;
+}
+
+.div-footer ul {
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.div-footer li:hover {
+  text-decoration: underline;
+}
+
+.design-details {
+  font-size: 18px;
+  padding-left: 30px;
+  margin-top: 100px;
+}
+
+.div-footer-icons {
+  font-size: 50px;
+  padding-top: 62px;
+  margin-left: 20px;
+}
+
+.div-footer-icons i {
+  padding: 15px;
+}
+
+.div-footer-icons a:hover {
+  color: cadetblue;
+}
+
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .design-details {
+    font-size: 10px;
+  }
+
+  .div-footer-icons {
+    font-size: 20px;
+    padding-right: 12px;
+  }
+
+  .div-footer a {
+    font-size: 15px;
+  }
+
+  .footer-content {
+    padding-left: 30px;
+  }
+
+  .layout {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .accordion {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+  
+  .accordion__question p {
+    margin: 5px;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 20px;
+    color: #d8f6ff;
+  }
+  
+  .accordion__answer p {
+    margin: 5px;
+    padding: 20px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 6, 6);
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: justify;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .accordion:hover {
+    cursor: pointer;
+  }
+  
+  .accordion__answer {
+    display: none;
+  }
+  
+  .accordion.active .accordion__answer {
+    display: block;
+  }
+
+}
+
+

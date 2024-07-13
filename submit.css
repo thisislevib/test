@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0c0303;
+    height: fit-content;
+    
+  }
+  
+  .brand-title {
+    font-size: 2.7rem;
+    color: #d8f6ff;
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .navbar-links {
+    height: 100%;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #d8f6ff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5em;
+    padding: 0.9rem;
+  }
+  
+  .navbar-links li:hover {
+    background-color: #555;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #d8f6ff;
+    border-radius: 10px;
+  }
+  
+    
+  h1 {
+    font-size: 52px;
+    padding-bottom: 15px;
+  
+  }
+  
+  h1,h2{
+    text-align: center;
+    text-shadow: 1px 1px 1px #d8f6ff(0, 0, 0, 0.2);
+    color: #eaf9fe;
+  }
+  
+
+  .submit-div{
+    padding-top: 15px;
+    font-size: 23px;
+    background-color: #333;
+    width: 850px;
+    height: 110px;
+    margin: auto;
+    color: #d8f6ff;
+    font-weight: bold;
+   
+  }
+  
+  body {
+    background-color: #0c0303;
+  }
+  
+  main{
+    padding-bottom: 150px;
+    
+  }
+  /* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #d8f6ff;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #ffffff;
+    color:rgb(9, 8, 8);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    background-color: #333;
+    padding: 20px;
+    margin: auto;
+    width: 550px;
+    height: fit-content;
+
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  footer {
+    background-color: #333;
+    color: white;
+    height: 300px;
+    position: relative;
+  
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: left;
+    padding-left: 80px;
+  }
+  
+  .div-footer ul {
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  
+  .div-footer li:hover {
+    text-decoration: underline;
+  }
+  
+  .design-details {
+    font-size: 18px;
+    padding-left: 30px;
+    margin-top: 100px;
+  }
+  
+  .div-footer-icons {
+    font-size: 50px;
+    padding-top: 62px;
+    margin-left: 20px;
+  }
+  
+  .div-footer-icons i {
+    padding: 15px;
+  }
+  
+  .div-footer-icons a:hover {
+    color: cadetblue;
+  }
+  
+  
+  @media (max-width: 800px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      
+    }
+  
+    .toggle-button {
+      display: flex;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+  
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+      text-align: center;
+    }
+  
+    .navbar-links ul li a {
+      padding: 0.5rem 1rem;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .design-details {
+      font-size: 10px;
+    }
+  
+    .div-footer-icons {
+      font-size: 20px;
+      padding-right: 12px;
+    }
+  
+    .div-footer a {
+      font-size: 15px;
+    }
+  
+    .footer-content {
+      padding-left: 30px;
+    }
+
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+  
+  /* Style inputs, select elements and textareas */
+  input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #d8f6ff;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #ffffff;
+    color:rgb(9, 8, 8);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    background-color: #333;
+    padding: 20px;
+    margin: auto;
+    width: 500px;
+    height: fit-content;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  h1 {
+    font-size: 52px;
+    padding-bottom: 15px;
+  
+  }
+  
+  h1,h2{
+    text-align: center;
+    text-shadow: 1px 1px 1px #d8f6ff(0, 0, 0, 0.2);
+    color: #eaf9fe;
+  }
+  
+
+  .submit-div{
+    padding-top: 10px;
+    font-size: 15px;
+    background-color: #333;
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    color: #d8f6ff;
+    font-weight: bold;
+   
+  }
+  
+  body {
+    background-color: #0c0303;
+  }
+  
+  main{
+    padding-bottom: 150px;
+  }
+
+
+  }
+  
+  
+  
